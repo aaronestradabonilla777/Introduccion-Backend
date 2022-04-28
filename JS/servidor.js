@@ -9,4 +9,15 @@ http.createServer(function (request, response){
     if(filepath == './'){
         filepath = './index.html';
     }
-})
+
+//minitipos de datos porque se toman en cuenta
+var extname = String(path.extname(filepath)).toLocaleLowerCase();
+var contentType = 'text/html';
+var mimeTypes = {
+'.html': 'text/html',
+'.js': 'text/javascript',
+'.css': 'text/css',
+'.png': 'text/png'
+//'.gif': 'text/gif',
+//'.mp4': 'text/mp4',
+}});
