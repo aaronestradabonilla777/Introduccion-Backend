@@ -22,7 +22,7 @@ var mimeTypes = {
 //'.mp4': 'text/mp4',
 };
 
-contentType = mimeTypes [extreme] || 'application/octet-stream';
+contentType = mimeTypes [extname] || 'application/octet-stream';
 fs.readFile(filepath, function (error,content){
     if(error){
         if(error.code =='ENOENT'){
@@ -33,7 +33,7 @@ fs.readFile(filepath, function (error,content){
         }
         else{
             response.writeHead(500);
-            response.end('Sorry, check with the site admin for error: ')+error.code();
+            response.end('Sorry, check with the site admin for error: '+error.code+'..\n');
             response.end();
         }
     }
@@ -43,4 +43,4 @@ fs.readFile(filepath, function (error,content){
     }
 });
 }).listen(3000);
-console.log('Server running at http://127.0.0.1:3000/');
+console.log('Server running at http://192.168.50.181:3000/');
