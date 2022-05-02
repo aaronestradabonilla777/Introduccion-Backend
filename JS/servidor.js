@@ -17,7 +17,7 @@ var mimeTypes = {
 '.html': 'text/html',
 '.js': 'text/javascript',
 '.css': 'text/css',
-'.png': 'text/png'
+'.png': 'image/png'
 //'.gif': 'text/gif',
 //'.mp4': 'text/mp4',
 };
@@ -43,4 +43,4 @@ fs.readFile(filepath, function (error,content){
     }
 });
 }).listen(3000);
-console.log('Server running at http://192.168.50.181:3000/');
+console.log('Server running at http://192.168.50.137:3000/');
